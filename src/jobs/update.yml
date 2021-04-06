@@ -1,0 +1,14 @@
+description: >
+  Update Strigo classe from Zenika training.
+
+docker:
+  - image: zenika/ztraining2strigo
+steps:
+  - checkout
+  - attach_workspace:
+      at: ./
+  - run:
+      name: Update Strigo classe
+      command: |
+        mv dist/pdf/* pdf/
+        python3 -m ztraining2strigo update --diff

@@ -1,0 +1,28 @@
+description: >
+  Update Strigo classe from Zenika training.
+  Launched only on saturday at midnight.
+usage:
+  version: 2.1
+
+  orbs:
+    training-material: zenika/training-material@w.x
+    ztraining2strigo: zenika-training/ztraining2strigo@y.z
+
+  workflows:
+    version: 2
+
+    build-and-update:
+      triggers:
+        - schedule:
+            cron: "0 0 * * 6"
+            filters:
+              branches:
+                only:
+                  - master
+                  - main
+      jobs:
+        - training-material/build
+        - ztraining2strigo/update:
+            requires:
+              - training-material/build
+            context: strigo-api
