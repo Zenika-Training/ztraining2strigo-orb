@@ -1,6 +1,6 @@
 # Orb Project Template
 
-[![CircleCI Build Status](https://circleci.com/gh/Zenika-Training/ztraining2strigo-orb.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/Zenika-Training/ztraining2strigo-orb) [![CircleCI Orb Version](https://badges.circleci.com/orbs/zenika-training/ztraining2strigo)](https://circleci.com/orbs/registry/orb/zenika-training/ztraining2strigo) [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/Zenika-Training/ztraining2strigo-orb/master/LICENSE)
+[![CircleCI Build Status](https://circleci.com/gh/Zenika-Training/ztraining2strigo-orb.svg?style=shield "CircleCI Build Status")](https://circleci.com/gh/Zenika-Training/ztraining2strigo-orb) [![CircleCI Orb Version](https://badges.circleci.com/orbs/zenika-training/ztraining2strigo.svg)](https://circleci.com/orbs/registry/orb/zenika-training/ztraining2strigo) [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/Zenika-Training/ztraining2strigo-orb/master/LICENSE)
 
 Update Strigo classe from Zenika training.
 
