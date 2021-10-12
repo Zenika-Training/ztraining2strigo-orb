@@ -1,6 +1,10 @@
 description: >
   Update Strigo classe from Zenika training.
 
+parameters:
+  config-file:
+    type: string
+    default: ''
 docker:
   - image: zenika/ztraining2strigo
 steps:
@@ -11,4 +15,7 @@ steps:
       name: Update Strigo classe
       command: |
         mv dist/pdf/* pdf/
-        python3 -m ztraining2strigo update --diff
+        if [ -n "<< parameters.config-file >>" ]; then
+          CONFIG_OPT='--config << parameters.config-file >>'
+        fi
+        python3 -m ztraining2strigo ${CONFIG_OPT} update --diff
