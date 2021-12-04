@@ -14,6 +14,7 @@ steps:
   - run:
       name: Update Strigo classe
       command: |
+        mkdir --parents pdf/
         mv dist/pdf/* pdf/
         if [ -n "<< parameters.config-file >>" ]; then
           CONFIG_OPT='--config << parameters.config-file >>'
