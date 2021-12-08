@@ -1,5 +1,5 @@
 description: >
-  Update Strigo class from Zenika training with specific config.
+  Check update (dry-run) of Strigo class from Zenika training.
 usage:
   version: 2.1
 
@@ -10,11 +10,10 @@ usage:
   workflows:
     version: 2
 
-    build-and-update:
+    build-and-check-update:
       jobs:
         - training-material/build
-        - ztraining2strigo/update:
-            config-file: strigo.custom.json
+        - ztraining2strigo/check:
             requires:
               - training-material/build
             context: strigo-api
