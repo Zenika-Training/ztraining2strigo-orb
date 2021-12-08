@@ -1,0 +1,19 @@
+description: >
+  Check update (dry-run) of Strigo class from Zenika training.
+usage:
+  version: 2.1
+
+  orbs:
+    training-material: zenika/training-material@w.x
+    ztraining2strigo: zenika-training/ztraining2strigo@y.z
+
+  workflows:
+    version: 2
+
+    build-and-check-update:
+      jobs:
+        - training-material/build
+        - ztraining2strigo/check:
+            requires:
+              - training-material/build
+            context: strigo-api
